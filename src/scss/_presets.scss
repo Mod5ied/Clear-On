@@ -1,0 +1,30 @@
+* {
+  order: 1px solid red !important;
+  box-sizing: border-box;
+}
+
+@mixin flexLayout($direction) {
+  display: flex;
+  flex-flow: $direction;
+}
+@mixin row($direction) {
+  justify-content: $direction;
+}
+@mixin column($direction) {
+  align-items: $direction;
+}
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+$font-fam: 'Quicksand', sans-serif;
+$font-sec: 'Quicksand', sans-serif;
+$font-tet: 'Comfortaa', cursive;
+
+$weight-prim: 800;
+$weight-sec: 700;
+$weight-tet: 400;
+$weight-light: 200;
+
+$background-prim: hsl(0, 0%, 96%);

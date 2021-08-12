@@ -1,0 +1,99 @@
+@import "./presets";
+
+@media (max-width: 780px) {
+  #main {
+    height: 100vh;
+    @include flexLayout(column);
+    @include column(center);
+    padding: 1.5rem;
+    gap: 2rem;
+    background: $background-prim;
+
+    #svg-blob {
+      position: fixed;
+      bottom: 43%;
+      left: -20%;
+      right: 0;
+      width: 38rem;
+      z-index: 2;
+    }
+    #svg-blob2 {
+      position: fixed;
+      bottom: 20%;
+      left: -20%;
+      right: 0;
+      width: 30rem;
+      z-index: 2;
+    }
+    #svg-blob3 {
+      position: fixed;
+      bottom: -25%;
+      left: -35%;
+      right: 0;
+      width: 40rem;
+      transform: rotate(-45deg);
+      z-index: 2;
+    }
+    
+    .section-obj {
+      background: $background-prim;
+      font: $weight-tet 1rem $font-fam;
+      color: #000;
+      line-height: 1.5;
+      position: relative;
+      z-index: 99;
+      border-radius: 0.3rem;
+      margin-top: 3.2rem;
+      
+    }
+    #social-icons {
+      @include flexLayout(column);
+      @include row(center);
+      gap: 2rem;
+      position: relative;
+      z-index: 99;
+      
+
+      .social-icon-navs {
+        @include flexLayout(row);
+        @include column(center);
+        @include row(space-between);
+        gap: 1rem;
+        width: 330px;
+        height: 100px;
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+        border: .5px solid hsla(0, 0%, 20%, 0.438);
+        background: hsla(0, 0%, 98%, 0.658);
+        
+      }
+      .social-icon-navs:hover{
+        border: 1.5px solid rgba(8, 139, 8, 0.918);
+        .route {
+          display: flex;
+          flex: 90%;
+          font: $weight-sec 1rem $font-sec;
+        }
+      }
+      .icons {
+        font-size: 1.5rem;
+      }
+      .icon2 {
+        color: #07316bcb;
+      }
+      .one {
+        color: #07316bcb;
+      }
+      .two {
+        color: rgba(8, 139, 8, 0.918);
+      }
+      .route {
+        display: flex;
+        flex: 90%;
+        font: $weight-sec 1rem $font-sec;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+}

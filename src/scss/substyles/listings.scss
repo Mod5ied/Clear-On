@@ -1,0 +1,100 @@
+@import "../presets";
+
+@media (max-width: 780px) {
+  #home {
+    @include flexLayout(column);
+    height: 100vh;
+    background: $background-prim;
+
+    #head {
+      @include flexLayout(row);
+      @include row(center);
+
+      #head-text {
+        margin: auto;
+        font: $weight-sec 1.2rem $font-sec;
+        color: #07316bcb;
+      }
+    }
+    #main {
+      height: 100%;
+
+      #desc {
+        @include gridCenter;
+        padding: 2rem 2rem;
+        .desc {
+          font: $weight-tet 1rem $font-fam;
+        }
+      }
+      #list {
+        @include flexLayout(column);
+        position: relative;
+        top: 3rem;
+        gap: 2rem;
+        padding: 1.2rem;
+
+        .list-nav {
+          @include flexLayout(row);
+          @include row(space-between);
+          @include column(center);
+          gap: 1.2rem;
+          padding: 1.5rem;
+          border-radius: 0.4rem;
+          box-shadow: 0 6px 12px hsl(0, 0%, 50%);
+
+          .list-fac {
+            font: $weight-sec 1rem $font-sec;
+            color: hsl(0, 0%, 20%);
+          }
+          .icon1 {
+            font-size: 1.8rem;
+          }
+          .icon2 {
+            font-size: 1.2rem;
+          }
+          .one,
+          .three {
+            color: rgba(14, 115, 197, 0.822);
+          }
+          .two,
+          .four {
+            color: #379383;
+          }
+        }
+      }
+    }
+    #foot {
+      @include flexLayout(column);
+      // width: 50%;  /* w  uld traverse it to the right unordely */
+      position: fixed;
+      bottom: 1%;
+      left: 45%;
+
+      #foot-nav {
+        @include flexLayout(column);
+        @include column(center);
+      }
+      #foot-text {
+        margin-bottom: 0.2rem;
+        font: $weight-sec 1.15rem $font-sec;
+      }
+      #foot-style {
+        width: 4rem;
+        height: 0.38rem;
+        margin-bottom: 0.2rem;
+        border-radius: 0.5rem;
+        background-color: #07316bcb;
+      }
+    }
+    #foot:focus #foot-text,
+    #foot:hover #foot-text {
+      color: #379383;
+    }
+    #foot:focus #foot-style,
+    #foot:hover #foot-style {
+      background: #379383;
+    }
+  }
+}
+@media (min-width: 1024px) {
+}

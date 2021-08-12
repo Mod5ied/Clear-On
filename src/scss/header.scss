@@ -1,0 +1,38 @@
+@import "./presets";
+
+@media (max-width: 780px) {
+  #head {
+    @include flexLayout(row);
+    background: hsl(0, 0%, 100%);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 100%;
+
+    #icon {
+      @include gridCenter;
+
+      #burger {
+        font-size: 1.8rem;
+        color: #07316bcb;
+      }
+    }
+    #icon:hover {
+      background: #07316bef;
+
+      #burger {
+        color: #fff;
+      }
+    }
+    #mytitle {
+      margin: auto;
+      position: relative;
+      right: 5rem;
+      font: $weight-sec 1.26rem $font-fam;
+      color: #07316bcb;
+    }
+  }
+}
+@media (min-width: 1024px) {
+}

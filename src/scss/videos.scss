@@ -1,0 +1,96 @@
+@import "./presets";
+
+@media (max-width: 780px) {
+  #main {
+    height: 100vh;
+    @include flexLayout(column);
+    @include column(center);
+    gap: 3rem;
+    padding: 1.5rem;
+    background: $background-prim;
+
+    #head-text {
+      font: $weight-sec 1rem $font-fam;
+      margin-top: 3.5rem;
+    }
+    #section {
+      @include flexLayout(column);
+      @include column(center);
+      gap: 2rem;
+      position: relative;
+      z-index: 99;
+
+      .section-cards {
+        @include flexLayout(column);
+        @include row(space-between);
+        width: 330px;
+        height: 135px;
+        border-radius: 0.5rem;
+        background: hsla(0, 0%, 98%, 0.705);
+        box-shadow: 0 4px 5px 0 hsl(0, 0%, 40%);
+        overflow: hidden;
+
+        h3 {
+          font: $weight-tet 1rem $font-fam;
+          border-bottom-right-radius: 1.5rem;
+          padding: 0.25rem;
+          width: 70%;
+          background: #0c3c80;
+          color: hsl(0, 0%, 94%);
+        }
+        span {
+          width: 30%;
+          position: relative;
+          left: 70%;
+          padding: 0.3rem;
+          background: rgba(35, 129, 35, 0.8);
+          font: $weight-tet 0.89rem $font-tet;
+          color: hsl(0, 0%, 90%);
+          text-align: center;
+          border-top-left-radius: 1rem;
+        }
+      }
+      .section-cards:hover {
+        overflow: hidden !important;
+        transform: scale(0.98);
+        transition: all 0.3s ease-in-out;
+
+        h3 {
+          border: 1px solid #07316b;
+          background: hsl(0, 0%, 100%);
+          font: $weight-sec 1.1rem $font-fam;
+          color: #07316b;
+        }
+        span {
+          border: 1.5px solid rgba(35, 129, 35, 0.8);
+          background: hsl(0, 0%, 94%);
+          color: rgba(35, 129, 35, 0.8);
+          font-weight: $weight-sec;
+        }
+      }
+    }
+    #svg-blob3 {
+      position: fixed;
+      left: 40%;
+      top: 2%;
+      height: 24rem;
+      z-index: 2;
+    }
+    #svg-blob2 {
+      position: fixed;
+      right: -35%;
+      top: 15%;
+      height: 37rem;
+      z-index: 2;
+    }
+    #svg-blob {
+      position: fixed;
+      left: -55%;
+      top: 45%;
+      height: 37rem;
+      z-index: 2;
+    }
+  }
+}
+@media (min-width: 1024px) {
+}

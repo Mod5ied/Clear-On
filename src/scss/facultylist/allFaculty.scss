@@ -1,0 +1,76 @@
+@import "../presets";
+
+@media (max-width: 780px) {
+  #home {
+    @include flexLayout(column);
+    height: 100vh;
+    background: $background-prim;
+
+    #head {
+      @include flexLayout(row);
+      @include row(space-between);
+
+      #head-title {
+        @include gridCenter;
+        font: $weight-sec 1.2rem $font-sec;
+        color: #07316bcb;
+      }
+      #burger {
+        margin: auto 0;
+        font-size: 1.7rem;
+        color: #07316be1;
+      }
+
+      #menu {
+        @include flexLayout(column);
+        gap: 0.5rem;
+        position: absolute;
+        top: 3.5rem;
+        right: 0.3rem;
+        border: 1px solid hsla(215, 88%, 22%, 0.4);
+        border-radius: 0.38rem;
+        box-shadow: 0 6px 8px hsla(215, 88%, 22%, 0.4);
+        background: hsl(0, 0%, 98%);
+
+        .menu-routes {
+          font: $weight-tet 1rem $font-sec;
+        }
+      }
+    }
+    #main {
+      @include flexLayout(column);
+
+      .center {
+        padding: 4rem 2rem;
+      }
+    }
+    #foot {
+      background: $background-prim;
+      position: fixed;
+      bottom: 0;
+      left: 40%;
+
+      #foot-style {
+        @include flexLayout(column);
+        gap: 2px;
+
+        #foot-text {
+          font: $weight-sec 1.15rem $font-sec;
+          text-align: center;
+        }
+        #span {
+          width: 4rem;
+          height: 0.38rem;
+          border-radius: 0.4rem;
+          background: #07316bcb;
+        }
+        #span:hover {
+          background: #379383;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}
