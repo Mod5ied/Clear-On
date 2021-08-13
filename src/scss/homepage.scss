@@ -1,41 +1,44 @@
 @import "./presets";
 
-@media (max-width: 780px) {
+@media (max-width: 500px){
   .home {
     #main {
       @include flexLayout(column);
       gap: 1rem;
       height: 140vh;
       background: $background-prim;
+      background-color: red;
       max-width: 100%;
       padding: 2rem 0;
+      position: relative;
+      z-index: 94;
 
       #svg1 {
         position: fixed;
-        bottom: 40%;
+        bottom: 50%;
         left: -40%;
         right: 0;
         width: 40rem;
-        // height: 40rem;
         z-index: 2;
-        // overflow-x: hidden;
+        overflow-x: hidden;
       }
 
       #main-section {
         @include flexLayout(column);
+        background-color: green;
         gap: 1rem;
         padding: 3rem 2rem;
         position: relative;
-        z-index: 99;
+        z-index: 94;
 
         #greets {
           font: $weight-sec 1.2rem $font-fam;
           color: rgba(255, 255, 255, 0.925);
         }
         #info {
-          font: 500 1rem $font-fam;
+          font: $weight-tet .9rem $font-fam;
           color: rgba(255, 255, 255, 0.925);
-          line-height: 1.5;
+          line-height: 1.8;
         }
         #date {
           position: relative;
@@ -47,25 +50,30 @@
       #scroll-section {
         @include flexLayout(row);
         @include column(center);
+        background: transparent;
+        background: purple;
         gap: 1rem;
-        padding: 2rem 2rem;
+        padding: 4rem 2rem;
+        min-height: 350px;
         overflow-x: scroll;
         overflow-y: hidden;
         position: relative;
-        z-index: 98;
+        z-index: 96;
 
         .main-cards {
           @include flexLayout(column);
           @include row(flex-end);
           gap: 2rem;
           border-radius: 0.5rem;
-          height: 280px;
-          min-width: 240px;
+          height: 260px;
+          min-width: 220px;
           padding: 1rem;
+          margin-top: 5rem;
           box-shadow: 3px 3px 4px 4px #07316b4b;
           background-color: hsla(0, 0%, 100%, 0.7);
           position: relative;
-          z-index: 98;
+          z-index: 99;
+          bottom: 3rem;
 
           #svg2 {
             position: absolute;
@@ -95,11 +103,11 @@
           #card-icon {
             position: relative;
             bottom: 40%;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #07316bcb;
           }
           h3 {
-            font: $weight-sec 1.2rem $font-fam;
+            font: $weight-sec 1.1rem $font-fam;
             color: rgba(255, 255, 255, 0.925);
             position: relative;
             z-index: 98;
@@ -109,12 +117,13 @@
             border-radius: 0.4rem;
             border: 3px solid #aa101094;
             background: hsl(0, 0%, 100%);
-            font: $weight-sec 1rem $font-sec;
-            color: #aa1010;
+            font: $weight-tet .8rem $font-sec;
+            color: #790909;
             text-align: center;
             position: relative;
             z-index: 98;
           }
+          #proceed:active,
           #proceed:focus {
             background: #aa1010;
             outline: none;
@@ -125,17 +134,17 @@
       #ad-sec1 {
         @include flexLayout(column);
         @include column(center);
-        padding: 2rem;
+        padding: 3rem 2rem;
         gap: 2rem;
 
         h4 {
-          font: $weight-sec 1.3rem $font-fam;
+          font: $weight-sec 1.2rem $font-fam;
           color: #aa1010;
           position: relative;
           z-index: 95;
         }
         p {
-          font: $weight-tet 1rem $font-sec;
+          font: $weight-tet .9rem $font-sec;
           color: #000;
           line-height: 1.5;
         }

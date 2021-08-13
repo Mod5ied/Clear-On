@@ -2,10 +2,10 @@
 
 @media (max-width: 780px) {
   #main {
-    height: 100vh;
+    height: 120vh;
     @include flexLayout(column);
     @include column(center);
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     gap: 2rem;
     background: $background-prim;
 

@@ -32,6 +32,8 @@
         top: 3rem;
         gap: 2rem;
         padding: 1.2rem;
+        margin-bottom: 1rem;
+        
 
         .list-nav {
           @include flexLayout(row);
@@ -67,7 +69,7 @@
       @include flexLayout(column);
       // width: 50%;  /* w  uld traverse it to the right unordely */
       position: fixed;
-      bottom: 1%;
+      bottom: 0;
       left: 45%;
 
       #foot-nav {
