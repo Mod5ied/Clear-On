@@ -8,13 +8,44 @@
           d="M25.6,-48.1C33.3,-39.9,39.7,-33.3,50.3,-25.5C60.9,-17.8,75.7,-8.9,77.7,1.1C79.6,11.2,68.8,22.3,62,36.6C55.1,50.9,52.3,68.2,42.6,74.5C33,80.8,16.5,76,1.9,72.8C-12.7,69.5,-25.5,67.8,-37.8,63.1C-50.1,58.3,-62,50.5,-71.6,39.5C-81.2,28.4,-88.6,14.2,-85.8,1.6C-83.1,-11,-70.2,-22.1,-60.3,-32.7C-50.5,-43.3,-43.7,-53.6,-34.1,-60.7C-24.6,-67.9,-12.3,-71.9,-1.7,-69C9,-66.2,17.9,-56.4,25.6,-48.1Z"
           transform="translate(100 100)"
         />
-      </svg>  
+      </svg>
+      <!--?xml version="1.0" standalone="no"?-->
+      <svg
+        id="svg-2"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+            <stop
+              id="stop1"
+              stop-color="rgba(7, 49, 107, 0.77)"
+              offset="0%"
+            ></stop>
+            <stop
+              id="stop2"
+              stop-color="rgba(7, 49, 107, 0.98)"
+              offset="100%"
+            ></stop>
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#sw-gradient)"
+          d="M26.3,-0.2C26.3,12.6,13.1,25.2,0.1,25.2C-12.9,25.2,-25.7,12.6,-25.7,-0.2C-25.7,-13,-12.9,-25.9,0.1,-25.9C13.1,-25.9,26.3,-13,26.3,-0.2Z"
+          width="100%"
+          height="100%"
+          transform="translate(50 50)"
+          stroke-width="0"
+          style="transition: all 0.3s ease 0s"
+        ></path>
+      </svg>
       <section id="main-section">
         <h2 id="greets">Hello {User}!</h2>
         <p id="info">
-          ClearOn is a platform that is designed to help you get through the rigorous
-          and confusing process of school clearance ranging from Faculty to Final year clearance.
-          It also offers useful tips to get you settled and started, like you should!
+          ClearOn is a platform that is designed to help you get through the
+          rigorous and confusing process of school clearance ranging from
+          Faculty to Final year clearance. It also offers useful tips to get you
+          settled and started, like you should!
         </p>
         <p id="date" details="bolder 4 date">
           Today: {{ month }},{{ day }},{{ year }}

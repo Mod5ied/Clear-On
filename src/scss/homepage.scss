@@ -7,25 +7,34 @@
       gap: 1rem;
       height: 140vh;
       background: $background-prim;
-      background-color: red;
+      background-color: $background-prim;
       max-width: 100%;
       padding: 2rem 0;
-      position: relative;
-      z-index: 94;
+      // position: relative;
+      // z-index: 94;
 
       #svg1 {
         position: fixed;
-        bottom: 50%;
+        bottom: 35%;
         left: -40%;
         right: 0;
         width: 40rem;
-        z-index: 2;
+        z-index: 92;
+        overflow-x: hidden;
+      }
+      #svg-2 {
+        position: fixed;
+        top: 55%;
+        left: 55%;
+        right: 0;
+        width: 20rem;
+        z-index: 92;
         overflow-x: hidden;
       }
 
       #main-section {
         @include flexLayout(column);
-        background-color: green;
+        // background-color: $background-prim;
         gap: 1rem;
         padding: 3rem 2rem;
         position: relative;
@@ -33,25 +42,25 @@
 
         #greets {
           font: $weight-sec 1.2rem $font-fam;
-          color: rgba(255, 255, 255, 0.925);
+          color: rgba(255, 255, 255, 0.829);
         }
         #info {
           font: $weight-tet .9rem $font-fam;
-          color: rgba(255, 255, 255, 0.925);
+          color: rgba(255, 255, 255, 0.829);
           line-height: 1.8;
         }
         #date {
           position: relative;
           top: 3rem;
           font: 500 1rem $font-sec;
-          color: rgba(255, 255, 255, 0.925);
+          color: rgba(255, 255, 255, 0.829);
         }
       }
       #scroll-section {
         @include flexLayout(row);
         @include column(center);
         background: transparent;
-        background: purple;
+        // background: $background-prim;
         gap: 1rem;
         padding: 4rem 2rem;
         min-height: 350px;
@@ -70,7 +79,7 @@
           padding: 1rem;
           margin-top: 5rem;
           box-shadow: 3px 3px 4px 4px #07316b4b;
-          background-color: hsla(0, 0%, 100%, 0.7);
+          background-color: hsla(0, 0%, 100%, 0.911);
           position: relative;
           z-index: 99;
           bottom: 3rem;
