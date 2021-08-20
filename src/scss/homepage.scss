@@ -1,7 +1,10 @@
 @import "./presets";
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .home {
+    ::-webkit-scrollbar {
+      display: none;
+    }
     #main {
       @include flexLayout(column);
       gap: 1rem;
@@ -10,15 +13,13 @@
       background-color: $background-prim;
       max-width: 100%;
       padding: 2rem 0;
-      // position: relative;
-      // z-index: 94;
 
       #svg1 {
         position: fixed;
-        bottom: 35%;
-        left: -40%;
+        bottom: 23%;
+        left: -45%;
         right: 0;
-        width: 40rem;
+        width: 47rem;
         z-index: 92;
         overflow-x: hidden;
       }
@@ -45,7 +46,7 @@
           color: rgba(255, 255, 255, 0.829);
         }
         #info {
-          font: $weight-tet .9rem $font-fam;
+          font: $weight-tet 0.9rem $font-fam;
           color: rgba(255, 255, 255, 0.829);
           line-height: 1.8;
         }
@@ -126,7 +127,7 @@
             border-radius: 0.4rem;
             border: 3px solid #aa101094;
             background: hsl(0, 0%, 100%);
-            font: $weight-tet .8rem $font-sec;
+            font: $weight-tet 0.8rem $font-sec;
             color: #790909;
             text-align: center;
             position: relative;
@@ -153,7 +154,7 @@
           z-index: 95;
         }
         p {
-          font: $weight-tet .9rem $font-sec;
+          font: $weight-tet 0.9rem $font-sec;
           color: #000;
           line-height: 1.5;
         }
@@ -182,4 +183,7 @@
   }
 }
 @media (min-width: 1024px) {
+  .home {
+    background: $background-prim;
+  }
 }

@@ -3,7 +3,7 @@
 @media (max-width: 780px) {
   #home {
     @include flexLayout(column);
-    height: 100vh;
+    height: 120vh;
     background: $background-prim;
 
     #head {
@@ -18,6 +18,7 @@
     }
     #main {
       height: 100%;
+      margin-bottom: 1rem;
 
       #desc {
         @include gridCenter;
@@ -39,7 +40,7 @@
           @include flexLayout(row);
           @include row(space-between);
           @include column(center);
-          gap: 1.2rem;
+          gap: .8rem;
           padding: 1.5rem;
           border-radius: 0.4rem;
           box-shadow: 0 6px 12px hsl(0, 0%, 50%);
@@ -67,14 +68,16 @@
     }
     #foot {
       @include flexLayout(column);
-      // width: 50%;  /* w  uld traverse it to the right unordely */
+      @include column(center);
+      width: 100%;  /* w  uld traverse it to the right unordely */
       position: fixed;
       bottom: 0;
-      left: 45%;
+      background-color: $background-init;
 
       #foot-nav {
         @include flexLayout(column);
         @include column(center);
+        width: 20%;
       }
       #foot-text {
         margin-bottom: 0.2rem;
@@ -88,13 +91,9 @@
         background-color: #07316bcb;
       }
     }
-    #foot:focus #foot-text,
-    #foot:hover #foot-text {
+    #foot-nav:focus #foot-text,
+    #foot-nav:hover #foot-text {
       color: #379383;
-    }
-    #foot:focus #foot-style,
-    #foot:hover #foot-style {
-      background: #379383;
     }
   }
 }
