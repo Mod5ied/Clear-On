@@ -6,29 +6,39 @@
     <h1 id="mytitle" class="navbar-item">{{ title }}</h1>
     <nav id="dropdown">
       <nav id="dropdown-links">
-        <router-link to="" class="links">Videos</router-link>
-        <router-link  to="" class="links">Assist</router-link>
+        <h3 class="links" @click="dropVideos" title="Click to close😉">Videos</h3>
+        <h3 class="links" @click="dropAssist" title="Click to close😉">Assist</h3>
       </nav>
       <nav class="dropdown-items">
-        <section id="dropdown-videos">
-          <h2>Videos 📹</h2>
-          <h3 id="vid-info">Below are videos to help you get cleared🙂</h3>
-          <section id="section">
+        <section id="dropdown-videos" class="hideVideos">
+          <h2 id="title">Videos 📹</h2>
+          <h3 id="vid-info">
+            Below are videos to help you get cleared. The video guides should
+            help you go through this process with less hassle than most people
+            who don't. You're naturally ahead!🙂
+          </h3>
+          <section id="video-section">
             <nav class="section-cards">
-              <h3>Faculty Clearance Videos</h3>
-              <i></i>
+              <i class="fas fa-school card-icon one"></i>
+              <router-link to="" id="route"
+                >Faculty Clearance Videos</router-link
+              >
             </nav>
             <nav class="section-cards">
-              <h3>Hostel Clearance Videos</h3>
-              <i></i>
+              <i class="fas fa-bed card-icon two"></i>
+              <router-link to="" id="route"
+                >Hostel Clearance Videos</router-link
+              >
             </nav>
             <nav class="section-cards">
-              <h3>Final Year Clearance Videos</h3>
-              <i></i>
+              <i class="fas fa-user-graduate card-icon three"></i>
+              <router-link to="" id="route"
+                >Final Year Clearance Videos</router-link
+              >
             </nav>
           </section>
         </section>
-        <section id="dropdown-assist">
+        <section id="dropdown-assist" class="hideAssist">
           <h2 id="title">Get Assistance from Us</h2>
           <p id="assist-info">
             We get you're very busy with what you're doing. You may be far off
@@ -62,11 +72,19 @@
       </nav>
     </nav>
     <nav class="navbar-menu navbar-end" id="myNavbar-menu">
-      <router-link to="" class="navbar-item" id="navbar-item"
-        >LogIn</router-link
+      <router-link
+        to=""
+        class="navbar-item"
+        id="navbar-item"
+        title="Feature not ready😟"
+        >Log-In</router-link
       >
-      <router-link to="" class="navbar-item" id="navbar-item"
-        >SignIn</router-link
+      <router-link
+        to=""
+        class="navbar-item"
+        id="navbar-item"
+        title="Feature not ready😟"
+        >Sign-In</router-link
       >
     </nav>
   </header>
@@ -75,12 +93,22 @@
 <script>
 export default {
   props: ["title"],
+  data() {
+    return {};
+  },
   methods: {
     toggleMenu() {
       document
         .getElementById("myNavbar-menu")
         .classList.toggle("myNavbar-menu");
     },
+    dropVideos() {
+      document.getElementById("dropdown-videos").classList.toggle("showVideos");
+    },
+    dropAssist() {
+      document.getElementById("dropdown-assist").classList.toggle("showAssist");
+    },
+    // Write an coditional that dropShows each only when the other is not shown
   },
 };
 </script>

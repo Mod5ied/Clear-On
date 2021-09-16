@@ -10,6 +10,10 @@
     right: 0;
     width: 100%;
 
+    #dropdown {
+      display: none;
+    }
+
     #icon {
       @include gridCenter;
 
@@ -54,7 +58,7 @@
       }
       #navbar-item:active,
       #navbar-item:hover {
-        color: hsl(0, 0%, 10);
+        color: hsl(0, 0%, 10%);
         font: $weight-sec 1rem $font-sec;
       }
     }
@@ -83,80 +87,144 @@
         @include column(center);
         gap: 1rem;
         position: relative;
-        top: 0.5rem;
+        top: 0.7rem;
 
         .links {
           margin: auto;
           padding: 0.4rem;
           border: 1px solid hsla(209, 67%, 14%, 0.699);
+          border-radius: 0.6rem;
           font: $weight-sec 0.8rem $font-sec;
-          color: hsl(0, 0%, 10);
+          color: hsl(0, 0%, 10%);
+          cursor: pointer;
         }
+        
       }
       .dropdown-items {
-        @include flexLayout(column);
-        min-height: 30rem;
-        max-height: 30rem;
-        width: 80%;
-        border: 1px solid hsla(0, 0%, 20%, 0.26);
-        border-bottom-right-radius: 0.5rem;
-        border-bottom-left-radius: 0.5rem;
-        padding: 4rem;
-        background: rgba(250, 250, 250, 0.774);
-        position: absolute;
-        top: 3.5rem;
-        right: 10%;
-        z-index: 99;
 
         #dropdown-videos {
-          @include flexLayout(column);
-          display: none;
+          flex-direction: column;
           gap: 2rem;
-
-          #section {
-            @include flexLayout(row);
-            @include row(center);
-            @include column(center);
-            gap: 2rem;
-          }
-        }
-        #dropdown-assist {
-          @include flexLayout(column);
-          gap: 2rem;
+          min-height: 30rem;
+          max-height: 30rem;
+          width: 80%;
+          border: 1px solid hsla(0, 0%, 20%, 0.26);
+          border-bottom-right-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+          border-top: none;
+          padding: 4rem;
+          background: rgba(250, 250, 250, 0.774);
+          position: absolute;
+          top: 3.4rem;
+          right: 10%;
+          z-index: 99;
 
           #title {
             font: $weight-sec 1.2rem $font-sec;
+            color: #07316bcb;
           }
+          #vid-info {
+            font: $weight-tet 0.83rem $font-sec;
+            line-height: 1.5rem;
+            word-spacing: 2px;
+            width: 50%;
+          }
+          #video-section {
+            @include flexLayout(row);
+            @include row(flex-start);
+            @include column(center);
+            gap: 2rem;
 
+            .section-cards {
+              @include flexLayout(column);
+              @include row(center);
+              @include column(flex-start);
+              padding: 0 0.5rem;
+              border: 2px solid hsla(210, 67%, 14%, 0.521);
+              border-radius: 0.4rem;
+              gap: 2rem;
+              width: 12.5rem;
+              height: 100px;
+              background: hsl(0, 0%, 98%);
+              cursor: pointer;
+
+              #route {
+                font: $weight-sec 0.79rem $font-sec;
+                color: #07316bcb;
+              }
+              .card-icon {
+                font-size: 0.8rem;
+                text-align: left;
+              }
+              .one {
+                color: rgb(194, 19, 19);
+              }
+              .two {
+                color: rgb(97, 82, 14);
+              }
+              .three {
+                color: rgb(5, 146, 5);
+              }
+            }
+            .section-cards:hover {
+              transform: scale(0.98);
+              transition: all 0.5s ease-out;
+            }
+          }
+        }
+        #dropdown-assist {
+          flex-direction: column;
+          gap: 2rem;
+          min-height: 30rem;
+          max-height: 30rem;
+          width: 80%;
+          border: 1px solid hsla(0, 0%, 20%, 0.26);
+          border-bottom-right-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+          border-top: none;
+          padding: 4rem;
+          background: rgba(250, 250, 250, 0.774);
+          position: absolute;
+          top: 3.5rem;
+          right: 10%;
+          z-index: 99;
+    
+          #title {
+            font: $weight-sec 1.2rem $font-sec;
+            color: #07316bcb;
+          }
+    
           #assist-info {
             font: $weight-tet 0.83rem $font-sec;
             line-height: 1.5rem;
             word-spacing: 2px;
           }
-
+    
           #social-icons {
             @include flexLayout(row);
             @include row(flex-start);
             @include column(center);
             gap: 3rem;
             margin-top: 2.5rem;
-
+    
             .social-icon-navs {
               @include flexLayout(column);
               @include row(center);
               @include column(center);
-              border: 1px solid hsla(209, 67%, 14%, 0.699);
-              border-radius: .4rem;
+              border: 2px solid hsla(209, 67%, 14%, 0.699);
+              border-radius: 0.4rem;
               gap: 2rem;
-              width: 300px;
-              height: 120px;
-
+              width: 12rem;
+              height: 90px;
+              cursor: pointer;
+    
               .route {
-                font: $weight-tet 0.9rem $font-sec;
+                font: $weight-sec 0.79rem $font-sec;
+                color: #07316bcb;
               }
-
+    
               .icons {
-                font-size: 2rem;
+                font-size: 1.5rem;
               }
               .one {
                 color: #0a4392cb;
@@ -165,24 +233,41 @@
                 color: green;
               }
             }
+            .social-icon-navs:hover {
+              transform: scale(0.98);
+              transition: all 0.5s ease-out;
+            }
           }
+        }
+        .hideVideos {
+          display: none;
+        }
+        .hideAssist {
+          display: none;
+        }
+        .showVideos {
+          display: flex;
+        }
+        .showAssist {
+          display: flex;
         }
       }
     }
 
     #myNavbar-menu {
       @include flexLayout(row);
-      gap: 1.8rem;
+      gap: 1.5rem;
 
       #navbar-item {
         margin: auto 0;
-        border: 1px solid hsla(209, 67%, 14%, 0.699);
-        border-radius: 0.7rem;
+        border: 0.9px solid hsla(209, 67%, 14%, 0.699);
+        border-radius: 0.8rem;
         font: $weight-sec 0.8rem $font-sec;
-        color: hsl(0, 0%, 10);
+        color: hsl(0, 0%, 10%);
       }
       #navbar-item:hover,
       #navbar-item:focus {
+        border: hidden;
         background: #093c83e8;
         color: hsla(0, 0%, 100%, 0.966);
         outline: none;

@@ -146,12 +146,12 @@
         @include column(center);
         padding: 3rem 2rem;
         gap: 2rem;
+        position: relative;
+        z-index: 95;
 
         h4 {
           font: $weight-sec 1.2rem $font-fam;
           color: #aa1010;
-          position: relative;
-          z-index: 95;
         }
         p {
           font: $weight-tet 0.9rem $font-sec;

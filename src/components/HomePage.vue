@@ -65,7 +65,6 @@
             />
           </svg>
           <i class="fas fa-school" id="card-icon"></i>
-          <!-- <img :src="require('/src/assets/images/class.jpg').default" /> -->
           <h3>Faculty Clear</h3>
           <router-link to="/faculties" id="proceed">Proceed</router-link>
         </nav>
@@ -82,7 +81,6 @@
             />
           </svg>
           <i class="fas fa-bed" id="card-icon"></i>
-          <!-- <img src="" alt="" /> -->
           <h3>Hostels Clear</h3>
           <router-link to="/hostels" id="proceed">Proceed</router-link>
         </nav>
@@ -99,28 +97,10 @@
             />
           </svg>
           <i class="fas fa-user-graduate" id="card-icon"></i>
-          <!-- <img src="" alt="" /> -->
           <h3>Finals Clear</h3>
           <router-link to="/finals" id="proceed">Proceed</router-link>
         </nav>
       </section>
-      <!-- <section id="hidden-section">
-        <h4 id="desc" details="description">Select Faculty</h4>
-        <div id="slim-cards">
-          <nav class="slimCard">
-            <router-link to="/physcience"> Physical Sciences</router-link>
-          </nav>
-          <nav class="slimCard">
-            <router-link to="/engr"> Engineering</router-link>
-          </nav>
-          <nav class="slimCard">
-            <router-link to="/bioscience"> Biological Sciences</router-link>
-          </nav>
-          <nav class="slimCard">
-            <router-link to="/pharm"> Pharmaceuticals</router-link>
-          </nav>
-        </div>
-      </section> -->
       <!-- ADS HERE -->
       <section id="ad-sec1">
         <h4>SEARCHING FOR A LODGE?</h4>
