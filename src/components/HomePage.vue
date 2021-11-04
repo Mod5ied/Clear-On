@@ -9,36 +9,6 @@
           transform="translate(100 100)"
         />
       </svg>
-      <!--?xml version="1.0" standalone="no"?-->
-      <svg
-        id="svg-2"
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-            <stop
-              id="stop1"
-              stop-color="rgba(7, 49, 107, 0.77)"
-              offset="0%"
-            ></stop>
-            <stop
-              id="stop2"
-              stop-color="rgba(7, 49, 107, 0.98)"
-              offset="100%"
-            ></stop>
-          </linearGradient>
-        </defs>
-        <path
-          fill="url(#sw-gradient)"
-          d="M26.3,-0.2C26.3,12.6,13.1,25.2,0.1,25.2C-12.9,25.2,-25.7,12.6,-25.7,-0.2C-25.7,-13,-12.9,-25.9,0.1,-25.9C13.1,-25.9,26.3,-13,26.3,-0.2Z"
-          width="100%"
-          height="100%"
-          transform="translate(50 50)"
-          stroke-width="0"
-          style="transition: all 0.3s ease 0s"
-        ></path>
-      </svg>
       <section id="main-section">
         <h2 id="greets">Hello {User}!</h2>
         <p id="info">
@@ -51,6 +21,7 @@
           Today: {{ month }},{{ day }},{{ year }}
         </p>
       </section>
+      <!-- Scroll Section Here -->
       <section id="scroll-section">
         <nav class="main-cards">
           <svg
@@ -120,6 +91,7 @@
 </template>
 
 <script>
+// import { ref } from "@vue/reactivity";
 import footer from "./PubFooter.vue";
 import header from "./PubHeader.vue";
 
@@ -140,8 +112,9 @@ export default {
     let myDate = new Date();
     let day = myDate.getDay();
     let year = myDate.getFullYear();
+    // let title = ref("ClearOn");
 
-    return { day, year };
+    return { day, year,  };
   },
 };
 </script>

@@ -184,6 +184,31 @@
 }
 @media (min-width: 1024px) {
   .home {
+    height: 100vh;
     background: $background-prim;
+
+    #svg1,
+    #svg2,
+    #svg3,
+    #svg4 {
+      display: none;
+    }
+    #main {
+      @include flexLayout(row);
+      @include row(flex-end);
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.2rem;
+
+      #main-section {
+        flex: 2;
+      }
+      #scroll-section {
+        flex: 2;
+      }
+      #ad-sec1 {
+        flex: 1;
+      }
+    }
   }
 }

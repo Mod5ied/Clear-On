@@ -34,13 +34,12 @@
         gap: 2rem;
         padding: 1.2rem;
         margin-bottom: 1rem;
-        
 
         .list-nav {
           @include flexLayout(row);
           @include row(space-between);
           @include column(center);
-          gap: .8rem;
+          gap: 0.8rem;
           padding: 1.5rem;
           border-radius: 0.4rem;
           box-shadow: 0 6px 12px hsl(0, 0%, 50%);
@@ -69,7 +68,7 @@
     #foot {
       @include flexLayout(column);
       @include column(center);
-      width: 100%;  /* w  uld traverse it to the right unordely */
+      width: 100%; /* would traverse it to the right unordely */
       position: fixed;
       bottom: 0;
       background-color: $background-init;
@@ -98,4 +97,43 @@
   }
 }
 @media (min-width: 1024px) {
+  #home {
+    height: 100vh;
+    #head {
+      @include flexLayout(row);
+      @include row(space-between);
+      padding: 0 1rem;
+    }
+    #main {
+      @include gridCenter;
+      // gap: 1rem;
+      width: 50%;
+      height: 80%;
+      margin: 0 auto;
+
+      #desc {
+        height: 80%;
+      }
+      #list {
+        @include flexLayout(row wrap);
+        @include row(flex-start);
+        width: 450px;
+        gap: 1rem;
+
+        .list-nav {
+          @include flexLayout(row);
+          @include row(space-between);
+
+          .icon1,
+          .icon2 {
+            @include gridCenter;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    #foot {
+      display: none;
+    }
+  }
 }

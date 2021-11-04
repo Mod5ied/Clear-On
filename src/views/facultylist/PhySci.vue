@@ -2,6 +2,7 @@
   <!-- USE SLOTS HERE TO SHOW AND HIDE CONTENTS in future-->
   <div id="home">
     <header class="navbar has-shadow" id="head">
+      <router-link to="/" class="home">Home</router-link>
       <h1 id="head-title" class="navbar-item">Physical Sciences</h1>
       <ion-icon
         name="menu"
@@ -11,7 +12,7 @@
       ></ion-icon>
       <!-- Hidden by default -->
       <nav class="navbar-item" id="menu" v-show="show">
-        <router-link to="/physcience" class="navbar-item menu-routes"
+        <router-link to="/physcience" class="navbar-item menu-routes active"
           >Phy. Sciences</router-link
         >
         <router-link to="/bioscience" class="navbar-item menu-routes"

@@ -98,7 +98,11 @@
           color: hsl(0, 0%, 10%);
           cursor: pointer;
         }
-        
+        .links:hover {
+          background: hsl(0, 0%, 95%);
+          color: #062452fd;
+          border: 1px solid #07316bcb;;
+        }
       }
       .dropdown-items {
 

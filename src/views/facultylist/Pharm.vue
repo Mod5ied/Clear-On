@@ -2,6 +2,7 @@
   <!-- USE SLOTS HERE TO SHOW AND HIDE CONTENTS in future-->
   <div id="home">
     <header class="navbar has-shadow" id="head">
+      <router-link to="/" class="home">Home</router-link>
       <h1 id="head-title" class="navbar-item">Pharmacy</h1>
       <ion-icon
         name="menu"
@@ -20,7 +21,7 @@
         <router-link to="/engr" class="navbar-item menu-routes"
           >Engineering</router-link
         >
-        <router-link to="/pharm" class="navbar-item menu-routes"
+        <router-link to="/pharm" class="navbar-item menu-routes active"
           >Pharmacy</router-link
         >
       </nav>

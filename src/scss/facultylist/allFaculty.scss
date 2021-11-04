@@ -10,6 +10,10 @@
       @include flexLayout(row);
       @include row(space-between);
 
+      .home {
+        display: none;
+      }
+
       #head-title {
         @include gridCenter;
         font: $weight-sec 1.2rem $font-sec;
@@ -73,4 +77,44 @@
 }
 
 @media (min-width: 1024px) {
+  #home {
+    height: 100vh;
+    #head {
+      @include flexLayout(row);
+      @include row(space-between);
+      padding: 0 1rem;
+
+      .home {
+        @include gridCenter;
+      }
+      #head-title {
+        display: none;
+      }
+      #burger {
+        display: none;
+      }
+      #menu {
+        display: flex !important;
+        flex-direction: row;
+        @include row(flex-end);
+
+        .active {
+          border-bottom: 1px solid #135bbf;
+        }
+      }
+    }
+    #main {
+      @include gridCenter;
+      padding: 1rem;
+      .center {
+        width: 50%;
+        height: 80vh;
+        padding: 1.2rem;
+        border-radius: 0.5rem;
+      }
+    }
+    #foot {
+      display: none;
+    }
+  }
 }

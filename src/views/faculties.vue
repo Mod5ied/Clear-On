@@ -2,6 +2,7 @@
   <div id="home">
     <header class="navbar has-shadow" id="head">
       <h1 class="navbar-item" id="head-text">Faculties</h1>
+      <router-link to="/" class="">Home</router-link>
     </header>
     <main id="main">
       <section id="desc">
@@ -31,7 +32,7 @@
           <ion-icon class="icon1 four" name="medkit-outline"></ion-icon>
           <!-- <span class="material-icons icon1 four"> health_and_safety </span> -->
           <!-- above is a google icon -->
-          <router-link to="/pharm" class="list-fac">Pharmaceuticals Sciences</router-link>
+          <router-link to="/pharm" class="list-fac">Pharmacy</router-link>
           <ion-icon class="icon2" name="chevron-forward-outline"></ion-icon>
         </nav>
       </section>
