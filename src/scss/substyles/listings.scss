@@ -99,30 +99,64 @@
 @media (min-width: 1024px) {
   #home {
     height: 100vh;
+    background: $background-prim;
+    
     #head {
       @include flexLayout(row);
       @include row(space-between);
       padding: 0 1rem;
+
+      #head-text {
+        font: $weight-sec 1rem $font-sec;
+      }
+      #homeBtn {
+        margin: auto 0;
+        // padding: .7rem;
+        padding: .4rem .65rem;
+        border: 0.9px solid hsla(209, 67%, 14%, 0.699);
+        border-radius: 0.8rem;
+        font: $weight-sec .76rem $font-sec;
+      }
+      #homeBtn:hover,
+      #homeBtn:focus {
+        border: .9px solid transparent;
+        background: #093c83e8;
+        color: hsla(0, 0%, 100%, 0.966);
+        outline: none;
+        transition: all .3s ease-in;
+      }
+
     }
     #main {
-      @include gridCenter;
-      // gap: 1rem;
+      @include flexLayout(column);
+      @include column(center);
+      gap: 1rem;
       width: 50%;
       height: 80%;
-      margin: 0 auto;
+      margin: .5rem auto;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: hsl(0, 0%, 99%);
+      box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 94%);
 
       #desc {
         height: 80%;
+        width: 70%;
+        font: $weight-tet .89rem $font-sec;
+        padding: .8rem;
+        line-height: 2;
       }
       #list {
         @include flexLayout(row wrap);
-        @include row(flex-start);
+        @include row(space-between);
         width: 450px;
+        height: 20%;
         gap: 1rem;
 
         .list-nav {
           @include flexLayout(row);
           @include row(space-between);
+          height: 30%;
 
           .icon1,
           .icon2 {

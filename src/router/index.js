@@ -2,9 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/HomePage";
 import AssistPage from "../components/AssistPage";
 import VideosPage from "../components/VideosPage";
+import NotFound from "../components/NotFound"
 
 import faculties from "../views/faculties";
-import finals from "../views/finals";
+// import finals from "../views/finals";
 import hostels from "../views/hostels";
 import bioscience from "../views/facultylist/BioSci";
 import engr from "../views/facultylist/Engr";
@@ -32,11 +33,11 @@ const routes = [
     name: "faculties",
     component: faculties,
   },
-  {
-    path: "/finals",
-    name: "finals",
-    component: finals,
-  },
+  // {
+  //   path: "/finals",
+  //   name: "finals",
+  //   component: finals,
+  // },
   {
     path: "/hostels",
     name: "hostels",
@@ -63,6 +64,11 @@ const routes = [
     name: "physcience",
     component: physcience,
   },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound
+  }
 ];
 
 const router = createRouter({

@@ -5,10 +5,6 @@
     ></i>
     <h1 id="mytitle" class="navbar-item">{{ title }}</h1>
     <nav id="dropdown">
-      <nav id="dropdown-links">
-        <h3 class="links" @click="dropVideos" title="Click to close😉">Videos</h3>
-        <h3 class="links" @click="dropAssist" title="Click to close😉">Assist</h3>
-      </nav>
       <nav class="dropdown-items">
         <section id="dropdown-videos" class="hideVideos">
           <h2 id="title">Videos 📹</h2>
@@ -71,7 +67,13 @@
         </section>
       </nav>
     </nav>
+
     <nav class="navbar-menu navbar-end" id="myNavbar-menu">
+      <!-- <nav id="dropdown-links"> -->
+      <h3 class="navbar-item" id="navbar-item" @click="dropVideos" title="Click to close😉">Videos</h3>
+      <h3 class="navbar-item" id="navbar-item" @click="dropAssist" title="Click to close😉">Assist</h3>
+      <!-- </nav> -->
+      🚦
       <router-link
         to=""
         class="navbar-item"
