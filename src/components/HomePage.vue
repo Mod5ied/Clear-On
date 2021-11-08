@@ -10,7 +10,7 @@
         />
       </svg>
       <section id="main-section">
-        <h2 id="greets">Hello {User}!</h2>
+        <h2 id="greets">Hello There!</h2>
         <p id="info">
           ClearOn is a platform that is designed to help you get through the
           rigorous and confusing process of school clearance ranging from
@@ -18,8 +18,9 @@
           settled and started, like you should!
         </p>
         <p id="date" details="bolder 4 date">
-          Today: {{ month }},{{ day }},{{ year }}
+          Today: November{{ month }},{{ day }},{{ year }}
         </p>
+        <img :src="unn" alt="" />
       </section>
       <!-- Scroll Section Here -->
       <section id="scroll-section">
@@ -74,8 +75,8 @@
       </section>
       <!-- ADS HERE -->
       <section id="ad-sec1">
-        <h4>SEARCHING FOR A LODGE?</h4>
-        <p>
+        <h4 id="title">SEARCHING FOR A LODGE?</h4>
+        <p id="info">
           UnnHousing has got you covered! The platform has a ton of beautiful
           and affordable lodges at distinct locations in and around UNN. Click
           on - UnnHousing below to check them out, and don't forget to recommend
@@ -92,6 +93,7 @@
 
 <script>
 // import { ref } from "@vue/reactivity";
+import unn from "../assets/unn.jpg"
 import footer from "./PubFooter.vue";
 import header from "./PubHeader.vue";
 
@@ -102,6 +104,7 @@ export default {
       title: "ClearOn",
       displayed: true,
       hidden: true,
+      unn: unn,
     };
   },
   components: {
@@ -114,7 +117,7 @@ export default {
     let year = myDate.getFullYear();
     // let title = ref("ClearOn");
 
-    return { day, year,  };
+    return { day, year };
   },
 };
 </script>

@@ -74,6 +74,7 @@
     #mytitle {
       margin: auto;
       font: $weight-sec 1.26rem $font-fam;
+      font-style: oblique;
       color: #07316bcb;
     }
     // my magic area lies here
@@ -275,7 +276,8 @@
 
       #navbar-item {
         margin: auto 0;
-        border: 0.9px solid hsla(209, 67%, 14%, 0.699);
+        // border: 0.9px solid hsla(209, 67%, 14%, 0.699);
+        border: 1px solid hsl(0, 0%, 86%);
         border-radius: 0.8rem;
         font: $weight-sec 0.76rem $font-sec;
         color: hsl(0, 0%, 10%);

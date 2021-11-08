@@ -100,7 +100,7 @@
   #home {
     height: 100vh;
     background: $background-prim;
-    
+
     #head {
       @include flexLayout(row);
       @include row(space-between);
@@ -111,21 +111,19 @@
       }
       #homeBtn {
         margin: auto 0;
-        // padding: .7rem;
-        padding: .4rem .65rem;
-        border: 0.9px solid hsla(209, 67%, 14%, 0.699);
+        padding: 0.4rem 0.65rem;
+        border: 1px solid hsl(0, 0%, 80%);
         border-radius: 0.8rem;
-        font: $weight-sec .76rem $font-sec;
+        font: $weight-sec 0.76rem $font-sec;
       }
       #homeBtn:hover,
       #homeBtn:focus {
-        border: .9px solid transparent;
+        border: 0.9px solid transparent;
         background: #093c83e8;
         color: hsla(0, 0%, 100%, 0.966);
         outline: none;
-        transition: all .3s ease-in;
+        transition: all 0.3s ease-in;
       }
-
     }
     #main {
       @include flexLayout(column);
@@ -133,7 +131,7 @@
       gap: 1rem;
       width: 50%;
       height: 80%;
-      margin: .5rem auto;
+      margin: 0.5rem auto;
       padding: 1rem;
       border-radius: 0.5rem;
       background: hsl(0, 0%, 99%);
@@ -142,8 +140,8 @@
       #desc {
         height: 80%;
         width: 70%;
-        font: $weight-tet .89rem $font-sec;
-        padding: .8rem;
+        font: $weight-tet 0.89rem $font-sec;
+        padding: 0.8rem;
         line-height: 2;
       }
       #list {
@@ -151,17 +149,29 @@
         @include row(space-between);
         width: 450px;
         height: 20%;
-        gap: 1rem;
+        padding: 0.5rem 0;
+        // gap: .4rem;
 
         .list-nav {
           @include flexLayout(row);
           @include row(space-between);
+          @include column(center);
+          padding: 0.7rem 0.3rem;
           height: 30%;
+          width: 48%;
+          border: 1px solid hsl(0, 0%, 80%);
+          border-radius: 0.6rem;
 
-          .icon1,
+          .icon1 {
+            @include gridCenter;
+            font-size: 1.2rem;
+          }
           .icon2 {
             @include gridCenter;
-            font-size: 1.5rem;
+            font-size: 1rem;
+          }
+          .list-fac {
+            font: $weight-sec 0.8rem $font-sec;
           }
         }
       }
