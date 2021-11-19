@@ -20,11 +20,13 @@
         <p id="date" details="bolder 4 date">
           Today: November{{ month }},{{ day }},{{ year }}
         </p>
-        <img :src="unn" alt="" />
+        <img :src="unn" alt="" id="mainImage" />
       </section>
       <!-- Scroll Section Here -->
+      <!-- The image should be hidden in mobile view -->
       <section id="scroll-section">
-        <nav class="main-cards">
+      <img alt="" id="scrollImage" />
+        <nav class="main-cards" id="card1">
           <svg
             id="svg2"
             viewBox="0 0 200 200"
@@ -40,7 +42,7 @@
           <h3>Faculty Clear</h3>
           <router-link to="/faculties" id="proceed">Proceed</router-link>
         </nav>
-        <nav class="main-cards">
+        <nav class="main-cards" id="card2">
           <svg
             id="svg3"
             viewBox="0 0 200 200"
@@ -56,7 +58,7 @@
           <h3>Hostels Clear</h3>
           <router-link to="/hostels" id="proceed">Proceed</router-link>
         </nav>
-        <nav class="main-cards">
+        <nav class="main-cards" id="card3">
           <svg
             id="svg4"
             viewBox="0 0 200 200"
@@ -93,7 +95,8 @@
 
 <script>
 // import { ref } from "@vue/reactivity";
-import unn from "../assets/unn.jpg"
+import scrollImage from "../assets/images/gradFinals.jpg";
+import unn from "../assets/unn.jpg";
 import footer from "./PubFooter.vue";
 import header from "./PubHeader.vue";
 
@@ -105,6 +108,7 @@ export default {
       displayed: true,
       hidden: true,
       unn: unn,
+      scrollImage: scrollImage,
     };
   },
   components: {
