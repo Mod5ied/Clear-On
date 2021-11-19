@@ -116,7 +116,10 @@
         </nav>
         <nav class="social-icon-navs">
           <ion-icon class="icons two" name="logo-whatsapp"></ion-icon>
-          <a href="https://wa.me/2347013620343" target="_blank" class="route twice"
+          <a
+            href="https://wa.me/2347013620343"
+            target="_blank"
+            class="route twice"
             >Click to chat on WhatsApp</a
           >
           <ion-icon class="icon2" name="chevron-forward-outline"></ion-icon>

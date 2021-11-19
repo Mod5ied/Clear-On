@@ -6,6 +6,7 @@
     @include flexLayout(column);
     @include column(center);
     padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
     gap: 2rem;
     background: $background-prim;
 
@@ -37,7 +38,7 @@
     
     .section-obj {
       background: $background-prim;
-      font: $weight-tet 1rem $font-fam;
+      font: $weight-tet .9rem $font-fam;
       color: #000;
       line-height: 1.5;
       position: relative;

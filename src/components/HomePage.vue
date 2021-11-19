@@ -9,38 +9,8 @@
           transform="translate(100 100)"
         />
       </svg>
-      <!--?xml version="1.0" standalone="no"?-->
-      <svg
-        id="svg-2"
-        viewBox="0 0 100 100"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-            <stop
-              id="stop1"
-              stop-color="rgba(7, 49, 107, 0.77)"
-              offset="0%"
-            ></stop>
-            <stop
-              id="stop2"
-              stop-color="rgba(7, 49, 107, 0.98)"
-              offset="100%"
-            ></stop>
-          </linearGradient>
-        </defs>
-        <path
-          fill="url(#sw-gradient)"
-          d="M26.3,-0.2C26.3,12.6,13.1,25.2,0.1,25.2C-12.9,25.2,-25.7,12.6,-25.7,-0.2C-25.7,-13,-12.9,-25.9,0.1,-25.9C13.1,-25.9,26.3,-13,26.3,-0.2Z"
-          width="100%"
-          height="100%"
-          transform="translate(50 50)"
-          stroke-width="0"
-          style="transition: all 0.3s ease 0s"
-        ></path>
-      </svg>
       <section id="main-section">
-        <h2 id="greets">Hello {User}!</h2>
+        <h2 id="greets">Hello There!</h2>
         <p id="info">
           ClearOn is a platform that is designed to help you get through the
           rigorous and confusing process of school clearance ranging from
@@ -48,11 +18,15 @@
           settled and started, like you should!
         </p>
         <p id="date" details="bolder 4 date">
-          Today: {{ month }},{{ day }},{{ year }}
+          Today: November{{ month }},{{ day }},{{ year }}
         </p>
+        <img :src="unn" alt="" id="mainImage" />
       </section>
+      <!-- Scroll Section Here -->
+      <!-- The image should be hidden in mobile view -->
       <section id="scroll-section">
-        <nav class="main-cards">
+      <img alt="" id="scrollImage" />
+        <nav class="main-cards" id="card1">
           <svg
             id="svg2"
             viewBox="0 0 200 200"
@@ -65,11 +39,10 @@
             />
           </svg>
           <i class="fas fa-school" id="card-icon"></i>
-          <!-- <img :src="require('/src/assets/images/class.jpg').default" /> -->
           <h3>Faculty Clear</h3>
           <router-link to="/faculties" id="proceed">Proceed</router-link>
         </nav>
-        <nav class="main-cards">
+        <nav class="main-cards" id="card2">
           <svg
             id="svg3"
             viewBox="0 0 200 200"
@@ -82,11 +55,10 @@
             />
           </svg>
           <i class="fas fa-bed" id="card-icon"></i>
-          <!-- <img src="" alt="" /> -->
           <h3>Hostels Clear</h3>
           <router-link to="/hostels" id="proceed">Proceed</router-link>
         </nav>
-        <nav class="main-cards">
+        <nav class="main-cards" id="card3">
           <svg
             id="svg4"
             viewBox="0 0 200 200"
@@ -99,32 +71,14 @@
             />
           </svg>
           <i class="fas fa-user-graduate" id="card-icon"></i>
-          <!-- <img src="" alt="" /> -->
           <h3>Finals Clear</h3>
           <router-link to="/finals" id="proceed">Proceed</router-link>
         </nav>
       </section>
-      <!-- <section id="hidden-section">
-        <h4 id="desc" details="description">Select Faculty</h4>
-        <div id="slim-cards">
-          <nav class="slimCard">
-            <router-link to="/physcience"> Physical Sciences</router-link>
-          </nav>
-          <nav class="slimCard">
-            <router-link to="/engr"> Engineering</router-link>
-          </nav>
-          <nav class="slimCard">
-            <router-link to="/bioscience"> Biological Sciences</router-link>
-          </nav>
-          <nav class="slimCard">
-            <router-link to="/pharm"> Pharmaceuticals</router-link>
-          </nav>
-        </div>
-      </section> -->
       <!-- ADS HERE -->
       <section id="ad-sec1">
-        <h4>SEARCHING FOR A LODGE?</h4>
-        <p>
+        <h4 id="title">SEARCHING FOR A LODGE?</h4>
+        <p id="info">
           UnnHousing has got you covered! The platform has a ton of beautiful
           and affordable lodges at distinct locations in and around UNN. Click
           on - UnnHousing below to check them out, and don't forget to recommend
@@ -140,6 +94,9 @@
 </template>
 
 <script>
+// import { ref } from "@vue/reactivity";
+import scrollImage from "../assets/images/gradFinals.jpg";
+import unn from "../assets/unn.jpg";
 import footer from "./PubFooter.vue";
 import header from "./PubHeader.vue";
 
@@ -150,6 +107,8 @@ export default {
       title: "ClearOn",
       displayed: true,
       hidden: true,
+      unn: unn,
+      scrollImage: scrollImage,
     };
   },
   components: {
@@ -160,6 +119,7 @@ export default {
     let myDate = new Date();
     let day = myDate.getDay();
     let year = myDate.getFullYear();
+    // let title = ref("ClearOn");
 
     return { day, year };
   },

@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+src/assets/node-v13.14.0-x64.msi
+src/assets/node-v13.14.0-x64.msi
+src/assets/node-v13.14.0-x64.msi

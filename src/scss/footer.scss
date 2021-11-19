@@ -1,6 +1,6 @@
 @import "./presets";
 
-@media (max-width: 780px) {
+@media (max-width: 500px) {
   #sticky {
     @include flexLayout(row);
     @include row(space-around);
@@ -35,4 +35,7 @@
   }
 }
 @media (min-width: 1024px) {
+    #sticky {
+      display: none;
+    }
 }

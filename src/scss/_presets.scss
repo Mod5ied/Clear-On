@@ -1,6 +1,7 @@
 * {
-  order: 1px solid red !important;
+  // outline: 1px solid red !important;
   box-sizing: border-box;
+  margin: 0;
 }
 
 @mixin flexLayout($direction) {
@@ -18,9 +19,9 @@
   place-items: center;
 }
 
-$font-fam: 'Quicksand', sans-serif;
-$font-sec: 'Quicksand', sans-serif;
-$font-tet: 'Comfortaa', cursive;
+$font-fam: "Quicksand", sans-serif;
+$font-sec: "Quicksand", sans-serif;
+$font-tet: "Comfortaa", cursive;
 
 $weight-prim: 800;
 $weight-sec: 700;

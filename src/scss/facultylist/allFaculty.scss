@@ -10,6 +10,10 @@
       @include flexLayout(row);
       @include row(space-between);
 
+      .home {
+        display: none;
+      }
+
       #head-title {
         @include gridCenter;
         font: $weight-sec 1.2rem $font-sec;
@@ -73,4 +77,70 @@
 }
 
 @media (min-width: 1024px) {
+  #home {
+    overflow: hidden;
+    
+    #head {
+      @include flexLayout(row);
+      @include row(space-between);
+      padding: 0 1rem;
+
+      .home {
+        @include gridCenter;
+        margin: auto 0;
+        padding: .4rem;
+        border: 1px solid transparent;
+        border-radius: .6rem;
+        font: $weight-sec 1rem $font-sec;
+        
+      }
+      .home:hover,
+      .home:focus {
+        border: 0.9px solid transparent;
+        background: #093c83e8;
+        color: hsla(0, 0%, 100%, 0.966);
+        outline: none;
+        transition: all 0.3s ease-in;
+      }
+
+      #head-title {
+        display: none;
+      }
+      #burger {
+        display: none;
+      }
+      #menu {
+        display: flex !important;
+        flex-direction: row;
+        @include row(flex-end);
+
+        .active {
+          border-bottom: 2px solid #135bbf;
+        }
+        .navbar-item{
+          font: $weight-sec .8rem $font-sec;
+        }
+      }
+    }
+    #main {
+      @include gridCenter;
+      height: 100vh;
+      padding: 1rem;
+      background: $background-prim;
+      overflow: hidden;
+      
+      .center {
+        width: 50%;
+        height: 85%;
+        margin-bottom: 5%;
+        padding: 1.2rem;
+        border-radius: 0.5rem;
+        background: hsl(0, 0%, 99%);
+        box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 94%);
+      }
+    }
+    #foot {
+      display: none;
+    }
+  }
 }
