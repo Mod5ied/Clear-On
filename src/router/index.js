@@ -68,6 +68,10 @@ const routes = [
     path: "/:catchAll(.*)",
     name: "NotFound",
     component: NotFound
+  },
+  {
+    path: "/physical",
+    redirect: "/physcience",
   }
 ];
 
