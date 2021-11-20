@@ -9,7 +9,7 @@
         <p class="desc">
           Here are the faculties that we know of.. click if you find yours.
           <br />
-          If not found, don't panick we're working on it 🙂
+          If not found, don't panick we're working on it 😄
           <br />
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus,
           delectus. Explicabo molestias magnam quo veniam aliquid enim excepturi
