@@ -88,10 +88,10 @@
       .home {
         @include gridCenter;
         margin: auto 0;
-        padding: .4rem;
-        border: 1px solid transparent;
+        padding: .3rem;
+        border: 1px solid hsla(0, 0%, 0%, 0.212);
         border-radius: .6rem;
-        font: $weight-sec 1rem $font-sec;
+        font: $weight-sec .93rem $font-sec;
         
       }
       .home:hover,
@@ -133,9 +133,11 @@
         width: 50%;
         height: 85%;
         margin-bottom: 5%;
-        padding: 1.2rem;
+        padding: 1.2rem 5rem;
         border-radius: 0.5rem;
         background: hsl(0, 0%, 99%);
+        font: 500 0.89rem $font-sec;
+        line-height: 2.5;
         box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 94%);
       }
     }
