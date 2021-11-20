@@ -7,14 +7,24 @@
     <main id="main">
       <section id="desc">
         <p class="desc">
-          Below are two Hostel categories: choose from the list.
+          UNN hostel fee must be paid for those whose intent is to reside in the
+          school hostels. The price range varies most sessions, but falls
+          along the following prices:
         </p>
         <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti neque
-        impedit earum ut, nulla nisi similique ea ducimus iusto suscipit. Lorem
-        ipsum dolor sit amet, consectetur adipisicing elit. Magni, eveniet
-        voluptate odit dolorum a perspiciatis inventore autem porro quos harum
-        minima, beatae fuga hic, fugit ut corrupti mollitia repellat cupiditate.
+        *️⃣Male Hostel = #12,000
+        <br />
+        *️⃣Female Hostel = #15,000 - #25,000
+        <br />
+        <br />
+        <p>
+          Please Note: To be able to qualify for hostel application, the student
+          should have paid their respective tuition fees, as you need that to be
+          able to apply.
+          <br />
+          Now to get more details about how to apply for and walk through the
+          hostel clearance processes, click on the tabs below based on your gender:
+        </p>
       </section>
       <section id="list">
         <nav class="list-nav">

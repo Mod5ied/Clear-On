@@ -108,6 +108,7 @@
 
       #head-text {
         font: $weight-sec 1rem $font-sec;
+        color: #093c83e8;
       }
       #homeBtn {
         margin: auto 0;
@@ -140,7 +141,7 @@
       #desc {
         height: 80%;
         width: 70%;
-        font: $weight-tet 0.89rem $font-sec;
+        font: 500 0.89rem $font-sec;
         padding: 0.8rem;
         line-height: 2;
       }
@@ -156,7 +157,7 @@
           @include flexLayout(row);
           @include row(space-between);
           @include column(center);
-          padding: 0.7rem 0.3rem;
+          padding: 1rem 0.3rem;
           height: 30%;
           width: 48%;
           border: 1px solid hsl(0, 0%, 80%);
@@ -165,13 +166,26 @@
           .icon1 {
             @include gridCenter;
             font-size: 1.2rem;
+            color: #093c83e8;
           }
           .icon2 {
             @include gridCenter;
             font-size: 1rem;
+            color: #093c83e8;
           }
           .list-fac {
             font: $weight-sec 0.8rem $font-sec;
+          }
+        }
+        .list-nav:hover {
+          transition: all 0.4s ease;
+          background-color: #093c83e8;
+          color: hsl(0, 0%, 94%);
+
+          .list-fac,
+          .icon1,
+          .icon2 {
+            color: hsl(0, 0%, 92%);
           }
         }
       }
