@@ -20,12 +20,19 @@
         <p id="date" details="bolder 4 date">
           Today: November{{ month }},{{ day }},{{ year }}
         </p>
-        <img :src="unn" alt="" id="mainImage" />
+        <img :src="unn" alt="" id="mainImage" loading="lazy" />
       </section>
       <!-- Scroll Section Here -->
       <!-- The image should be hidden in mobile view -->
       <section id="scroll-section">
-      <img alt="" id="scrollImage" />
+        <img loading="lazy" alt="" id="scrollImage" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+          mollitia dignissimos enim at exercitationem quis dolores doloremque
+          dolorem nihil, ad ipsam porro consectetur odit placeat quod tempore,
+          et saepe non? Ipsam officiis quod eius deserunt quae ipsa blanditiis,
+          soluta nisi omnis aut incidunt! Officiis tenetur odio molestiae quia.
+        </p>
         <nav class="main-cards" id="card1">
           <svg
             id="svg2"
@@ -80,9 +87,10 @@
         <h4 id="title">SEARCHING FOR A LODGE?</h4>
         <p id="info">
           UnnHousing has got you covered! The platform has a ton of beautiful
-          and affordable lodges at distinct locations in and around UNN. Click
-          on - UnnHousing below to check them out, and don't forget to recommend
-          ClearOn to friends!
+          and affordable lodges at distinct locations in and around UNN. The
+          avalable lodges are presented in price ranges, from affordable to
+          luxurios to suit your needs. Click on - UnnHousing below to check them
+          out, and don't forget to recommend ClearOn to friends!
         </p>
         <a href="https://www.unnhousing.com/" id="ad-link">
           <img src="@/assets/UnnHouse-logo.png" alt="" />
