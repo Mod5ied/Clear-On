@@ -72,8 +72,8 @@
 
     <nav class="navbar-menu navbar-end" id="myNavbar-menu">
       <!-- <nav id="dropdown-links"> -->
-      <h3 class="navbar-item" id="navbar-item" @click="dropVideos" title="Click to close😉">Videos</h3>
-      <h3 class="navbar-item" id="navbar-item" @click="dropAssist" title="Click to close😉">Assist</h3>
+      <h3 class="navbar-item hiddenMobile" id="navbar-item" @click="dropVideos" title="Click to close😉">Videos</h3>
+      <h3 class="navbar-item hiddenMobile" id="navbar-item" @click="dropAssist" title="Click to close😉">Assist</h3>
       <!-- </nav> -->
       <span id="separator"></span>
       <router-link
@@ -112,7 +112,9 @@ export default {
     dropAssist() {
       document.getElementById("dropdown-assist").classList.toggle("showAssist");
     },
-    // Write an coditional that dropShows each only when the other is not shown
+    /**   
+     * * Write an coditional that dropShows each only when the other is not shown
+     * */ 
   },
 };
 </script>

@@ -88,17 +88,17 @@
       .home {
         @include gridCenter;
         margin: auto 0;
-        padding: .3rem;
+        padding: .4rem .5rem;
         border: 1px solid hsla(0, 0%, 0%, 0.212);
-        border-radius: .6rem;
-        font: $weight-sec .93rem $font-sec;
+        border-radius: .78rem;
+        font: $weight-sec .86rem $font-sec;
         
       }
       .home:hover,
       .home:focus {
         border: 0.9px solid transparent;
-        background: #093c83e8;
-        color: hsla(0, 0%, 100%, 0.966);
+        background: #5cb85c;
+        color: hsla(0, 0%, 100%, 0.904);
         outline: none;
         transition: all 0.3s ease-in;
       }
@@ -115,7 +115,8 @@
         @include row(flex-end);
 
         .active {
-          border-bottom: 2px solid #135bbf;
+          
+          border-bottom: 2px solid #5cb85c;
         }
         .navbar-item{
           font: $weight-sec .8rem $font-sec;
