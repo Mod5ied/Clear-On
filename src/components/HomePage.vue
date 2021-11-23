@@ -12,10 +12,10 @@
       <section id="main-section">
         <h2 id="greets">Hello There!</h2>
         <p id="info">
-          ClearOn is a platform that is designed to help you get through the
+          ClearOn is a platform that helps and serves as a guide for you to get through the
           rigorous and confusing process of school clearance ranging from
           Faculty to Final year clearance. It also offers useful tips to get you
-          settled and started, like you should!
+          settled into the school life and attain your best with less stress.
         </p>
         <p id="date" details="bolder 4 date">
           Today: November{{ month }},{{ day }},{{ year }}
@@ -25,13 +25,13 @@
       <!-- Scroll Section Here -->
       <!-- The image should be hidden in mobile view -->
       <section id="scroll-section">
-        <img loading="lazy" alt="" id="scrollImage" />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-          mollitia dignissimos enim at exercitationem quis dolores doloremque
-          dolorem nihil, ad ipsam porro consectetur odit placeat quod tempore,
-          et saepe non? Ipsam officiis quod eius deserunt quae ipsa blanditiis,
-          soluta nisi omnis aut incidunt! Officiis tenetur odio molestiae quia.
+        <img loading="lazy" alt="" id="scrollImage" class="hiddenMobile"/>
+        <p class="hiddenMobile">
+          Clearance process is indeed a stressful one and we well understand
+          this, hence we've carefully decided and compiled the best possible way
+          to go through this without stress. Go through our collection of
+          clearanace guides and select the one you wish to undertake and see how
+          easy it gets with Clearon.
         </p>
         <nav class="main-cards" id="card1">
           <svg
