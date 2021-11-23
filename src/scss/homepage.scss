@@ -5,6 +5,9 @@
     ::-webkit-scrollbar {
       display: none;
     }
+    .hiddenMobile {
+      display: none;
+    }
     #main {
       @include flexLayout(column);
       gap: 1rem;
@@ -261,7 +264,7 @@
           background: url(../assets/images/gradFinals.jpg);
           border-top-left-radius: 0.8rem;
           border-top-right-radius: 0.8rem;
-          border: 1px solid rgba(0, 0, 0, 0.295);
+          // border: 1px solid rgba(41, 41, 41, 0.527);
           /* Add the blur effect */
           filter: blur(1px);
           -webkit-filter: blur(.78px);
@@ -276,7 +279,7 @@
           top: -1%;
         }
         p{
-          padding: .4rem;
+          padding: .4rem 1rem;
           font: $weight-sec .8rem $font-sec;
           line-height: 2;
         }
@@ -284,7 +287,7 @@
           @include flexLayout(row);
           @include row(center);
           @include column(center);
-          gap: 2rem;
+          gap: 3rem;
           width: 21rem;
           height: 2rem;
           border-radius: 0.8rem;
@@ -312,6 +315,7 @@
             border: 1px solid hsl(0, 0%, 80%);
           }
           h3 {
+            // padding: 1rem;
             font: $weight-sec 0.8rem $font-sec;
           }
           #proceed {
@@ -335,20 +339,20 @@
         }
         #card1 {
           // position: absolute;
-          top: 22%;
+          top: 23%;
           left: 72.5%;
           transform: translate(-50%, -50%);
         }
         #card2 {
           // position: absolute;
-          top: 32%;
+          top: 33%;
           left: 72.5%;
           transform: translate(-50%, -50%);
         }
         #card3 {
           // position: absolute;
           // background-color: rgba(0, 0, 0, 0.7);
-          top: 42%;
+          top: 43%;
           left: 72.5%;
           transform: translate(-50%, -50%);
         }

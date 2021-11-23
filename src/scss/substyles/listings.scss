@@ -6,6 +6,9 @@
     height: 120vh;
     background: $background-prim;
 
+    .hiddenMobile {
+      display: none;
+    }
     #head {
       @include flexLayout(row);
       @include row(center);
@@ -120,7 +123,9 @@
       #homeBtn:hover,
       #homeBtn:focus {
         border: 0.9px solid transparent;
-        background: #093c83e8;
+        // background: #093c83e8;
+        /* testing out bootstrap colors scheme here*/
+        background: #5cb85c;
         color: hsla(0, 0%, 100%, 0.966);
         outline: none;
         transition: all 0.3s ease-in;
@@ -137,6 +142,27 @@
       border-radius: 0.5rem;
       background: hsl(0, 0%, 99%);
       box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 94%);
+      overflow: hidden;
+
+      #bg-image {
+        /* The image used */
+        background: url(../assets/images/class.jpg);
+        border-radius: 0.5rem;
+        // border: 1px solid rgba(41, 41, 41, 0.527);
+        /* Add the blur effect */
+        filter: blur(1px);
+        -webkit-filter: blur(0.78px);
+        /* Full height */
+        height: 62%;
+        width: 50%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        top: 8%;
+        z-index: 1;
+      }
 
       #desc {
         height: 80%;
@@ -144,6 +170,16 @@
         font: 500 0.89rem $font-sec;
         padding: 0.8rem;
         line-height: 2;
+        position: relative;
+        z-index: 99;
+
+        .desc {
+          // width: 100%;
+          background: hsla(0, 0%, 0%, 0.377);
+          color: hsl(0, 0%, 94%);
+          padding: 0.3rem;
+          border-radius: 0.3rem;
+        }
       }
       #list {
         @include flexLayout(row wrap);
@@ -179,7 +215,8 @@
         }
         .list-nav:hover {
           transition: all 0.4s ease;
-          background-color: #093c83e8;
+          // background-color: #093c83e8;
+          background-color: #0275d8;
           color: hsl(0, 0%, 94%);
 
           .list-fac,
