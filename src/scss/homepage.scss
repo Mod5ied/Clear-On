@@ -5,15 +5,20 @@
     ::-webkit-scrollbar {
       display: none;
     }
+    .hiddenMobile {
+      display: none;
+    }
     #main {
       @include flexLayout(column);
       gap: 1rem;
       height: 140vh;
-      background: $background-prim;
-      background-color: $background-prim;
+      background: hsl(0, 0%, 93%);
       max-width: 100%;
       padding: 2rem 0;
 
+      #mainImage {
+        display: none;
+      }
       #svg1 {
         position: fixed;
         bottom: 23%;
@@ -41,6 +46,26 @@
         position: relative;
         z-index: 94;
 
+        #mainImg {
+          background: url(../assets/unn.jpg);
+          /* blurry effects */
+          filter: blur(0.2px);
+          -webkit-filter: blur(0.78px);
+          width: 100%;
+          height: 55vh;
+          background-size: cover;
+          position: absolute;
+          top: -2%;
+          right: 0.1%;
+          z-index: 1;
+        }
+        .cover {
+          position: relative;
+          z-index: 95;
+          background: rgba(0, 0, 0, 0.171);
+          padding: 0.4rem;
+          border-radius: 0.3rem;
+        }
         #greets {
           font: $weight-sec 1.2rem $font-fam;
           color: rgba(255, 255, 255, 0.829);
@@ -49,12 +74,16 @@
           font: $weight-tet 0.9rem $font-fam;
           color: rgba(255, 255, 255, 0.829);
           line-height: 1.8;
+          // position: relative;
+          // z-index: 95;
         }
         #date {
           position: relative;
           top: 3rem;
           font: 500 1rem $font-sec;
           color: rgba(255, 255, 255, 0.829);
+          // position: relative;
+          // z-index: 95;
         }
       }
       #scroll-section {
@@ -197,6 +226,9 @@
     #svg4 {
       display: none;
     }
+    .hiddenDesktop {
+      display: none;
+    }
     #main {
       @include flexLayout(row wrap);
       @include row(space-between);
@@ -210,44 +242,60 @@
       #main-section {
         @include flexLayout(column);
         gap: 1rem;
-        // @include column(center);
         max-height: 40rem;
         width: 50%;
         padding: 0.5rem;
         background: hsl(0, 0%, 97%);
-        box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 95%);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        box-shadow: 0.2rem 0.3rem 0.6rem 0.2rem hsl(0, 0%, 92%);
 
+        .hiddenDesktop {
+          display: none;
+        }
+        .cover {
+          @include flexLayout(column);
+          gap: 1rem;
+          outline: 1px solid hsl(0, 0%, 80%);
+          border-radius: 0.5rem;
+        }
         #greets {
+          width: 40%;
+          padding: 0.3rem;
           font: $weight-sec 1.2rem $font-sec;
           color: rgb(161, 49, 20);
         }
         #info {
+          padding: 0.4rem;
           font: $weight-tet 0.89rem $font-sec;
           line-height: 2;
+          background: rgba(226, 225, 225, 0.5);
         }
         #date {
-          width: 40%;
+          width: 38%;
           padding: 0.2rem;
           border: 1px solid hsl(0, 0%, 80%);
           border-radius: 0.5rem;
-          background: hsl(0, 0%, 97%);
+          background: hsl(0, 0%, 0%, 0.5);
           position: relative;
-          bottom: 75%;
-          left: 55%;
+          bottom: 17rem;
+          left: 1%;
           text-align: center;
           font: $weight-sec 0.8rem $font-sec;
-          color: #07316bcb;
+          color: hsl(0, 0%, 80%);
         }
-        img {
-          width: 90% 100%;
-          height: 100%;
-        }
+
+        // img {
+        //   width: 90% 100%;
+        //   height: 100%;
+        // }
       }
       #scroll-section {
         @include flexLayout(column);
         @include row(space-around);
         @include column(center);
-        height: 30rem;
+        gap: 0.5rem;
+        height: 28rem;
         width: 40%;
         border-radius: 0.8rem;
         border: 1px solid hsla(0, 0%, 0%, 0.4);
@@ -260,26 +308,34 @@
           background: url(../assets/images/gradFinals.jpg);
           border-top-left-radius: 0.8rem;
           border-top-right-radius: 0.8rem;
+          // border: 1px solid rgba(41, 41, 41, 0.527);
           /* Add the blur effect */
           filter: blur(1px);
-          -webkit-filter: blur(1px);
+          -webkit-filter: blur(0.78px);
           /* Full height */
           height: 100%;
-          width: 100%;
+          width: 100vw;
           /* Center and scale the image nicely */
           background-position: center;
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: 100% auto;
+          position: relative;
+          top: -1%;
+        }
+        p {
+          padding: 0.4rem 1rem;
+          font: $weight-sec 0.8rem $font-sec;
+          line-height: 2;
         }
         .main-cards {
           @include flexLayout(row);
           @include row(center);
           @include column(center);
-          gap: 2rem;
-          width: 22rem;
-          height: 4rem;
+          gap: 3rem;
+          width: 21rem;
+          height: 2rem;
           border-radius: 0.8rem;
-          border: 1px solid hsl(0, 0%, 90%);
+          border: 1px solid hsla(0, 0%, 18%, 0.479);
           //
           background-color: rgb(0, 0, 0); /* Fallback color */
           background-color: rgba(
@@ -290,8 +346,8 @@
           ); /* Black w/opacity/see-through */
           color: white;
           font-weight: bold;
-          border: 1px solid rgba(0, 0, 0, 0.705);
-          position: relative;
+          // border: 1px solid rgba(0, 0, 0, 0.705);
+          position: absolute;
           z-index: 2;
           padding: 20px;
           text-align: center;
@@ -303,6 +359,7 @@
             border: 1px solid hsl(0, 0%, 80%);
           }
           h3 {
+            // padding: 1rem;
             font: $weight-sec 0.8rem $font-sec;
           }
           #proceed {
@@ -310,6 +367,7 @@
             border-radius: 0.89rem;
             border: 1px solid hsl(0, 0%, 80%);
             font: $weight-sec 0.78rem $font-sec;
+            color: #0c499e;
           }
           #proceed:hover {
             border: 0.9px solid transparent;
@@ -325,27 +383,28 @@
         }
         #card1 {
           // position: absolute;
-          top: -35%;
-          left: 44%;
+          top: 8rem;
+          left: 72.5%;
           transform: translate(-50%, -50%);
         }
         #card2 {
           // position: absolute;
-          top: -25%;
-          left: 44%;
+          top: 13rem;
+          left: 72.5%;
           transform: translate(-50%, -50%);
         }
         #card3 {
           // position: absolute;
-          background-color: rgba(0, 0, 0, 0.7);
-          top: -15%;
-          left: 44%;
+          // background-color: rgba(0, 0, 0, 0.7);
+          top: 18rem;
+          left: 72.5%;
           transform: translate(-50%, -50%);
         }
       }
       #ad-sec1 {
         @include flexLayout(column);
         @include row(space-around);
+        gap: 0.8rem;
         // @include column(center);
         height: 50%;
         width: 50%;
@@ -353,15 +412,27 @@
         position: relative;
         top: 2%;
         background: hsl(0, 0%, 97%);
-        box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 95%);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        // box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 95%);
+        box-shadow: 0.2rem 0.3rem 0.6rem 0.2rem hsl(0, 0%, 92%);
 
         #title {
+          width: 60%;
           font: $weight-sec 1.2rem $font-sec;
           color: rgb(161, 49, 20);
         }
+        .cover {
+          @include flexLayout(column);
+          gap: 1rem;
+          outline: 1px solid hsl(0, 0%, 80%);
+          border-radius: 0.5rem;
+        }
         #info {
+          padding: 0.4rem;
           font: $weight-tet 0.89rem $font-sec;
           line-height: 2;
+          background: rgba(226, 225, 225, 0.5);
         }
         #ad-link {
           width: 50%;

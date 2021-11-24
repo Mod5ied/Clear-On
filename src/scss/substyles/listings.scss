@@ -3,35 +3,94 @@
 @media (max-width: 780px) {
   #home {
     @include flexLayout(column);
-    height: 120vh;
-    background: $background-prim;
+    height: 100vh;
+    background: hsl(0, 0%, 94%);
 
+    .hiddenMobile {
+      display: none;
+    }
     #head {
       @include flexLayout(row);
       @include row(center);
+      padding: 0.5rem;
 
       #head-text {
         margin: auto;
         font: $weight-sec 1.2rem $font-sec;
         color: #07316bcb;
+        position: relative;
+        right: 2rem;
+        bottom: 0.15rem;
+      }
+      #backBtn {
+        margin: auto 0;
+        font-size: 1.6rem;
+        padding: 0.3rem;
+      }
+      #backBtn:hover {
+        color: #5cb85c;
       }
     }
     #main {
       height: 100%;
       margin-bottom: 1rem;
 
+      #bg-image {
+        background: url(../assets/images/classDept.jpg);
+        /* Add the blur effect */
+        filter: blur(1px);
+        -webkit-filter: blur(0.78px);
+        /* full height */
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        position: absolute;
+        top: -2%;
+        z-index: 1;
+      }
+
       #desc {
         @include gridCenter;
         padding: 2rem 2rem;
+        position: relative;
+
+        #main-Img {
+          background: url(../assets/images/class.jpg);
+          /* Add the blur effect */
+          filter: blur(1px);
+          -webkit-filter: blur(0.78px);
+          /* full height */
+          width: 100%;
+          height: 60vh;
+          background-size: cover;
+          position: absolute;
+          top: -2%;
+          z-index: 1;
+        }
+
         .desc {
-          font: $weight-tet 1rem $font-fam;
+          padding: 0.5rem;
+          background: rgba(0, 0, 0, 0.445);
+          border-radius:.4rem;
+          color: hsl(0, 0%, 92%);
+          font: $weight-tet 0.94rem $font-fam;
+          z-index: 95;
+        }
+        .desc2,
+        .desc3 {
+          padding: 0.5rem;
+          background: rgba(0, 0, 0, 0.527);
+          border-radius:.4rem;
+          color: hsl(0, 0%, 92%);
+          font: $weight-tet 0.94em $font-fam;
+          z-index: 95;
         }
       }
       #list {
         @include flexLayout(column);
         position: relative;
-        top: 3rem;
-        gap: 2rem;
+        top: 1rem;
+        gap: 1rem;
         padding: 1.2rem;
         margin-bottom: 1rem;
 
@@ -42,7 +101,10 @@
           gap: 0.8rem;
           padding: 1.5rem;
           border-radius: 0.4rem;
-          box-shadow: 0 6px 12px hsl(0, 0%, 50%);
+          box-shadow: 0 6px 12px hsl(0, 1%, 50%);
+          position: relative;
+          z-index: 95;
+          background: hsl(0, 0%, 94%);
 
           .list-fac {
             font: $weight-sec 1rem $font-sec;
@@ -61,6 +123,17 @@
           .two,
           .four {
             color: #379383;
+          }
+        }
+        .list-nav:hover {
+          background: hsl(0, 0%, 0%, 0.4);
+          box-shadow: 0 6px 12px hsla(0, 1%, 50%, 0.055);
+          .list-fac {
+            font: $weight-sec 1rem $font-sec;
+            color: hsl(0, 0%, 85%);
+          }
+          .icon2 {
+            color: hsl(0, 0%, 85%);
           }
         }
       }
@@ -101,6 +174,10 @@
     height: 100vh;
     background: $background-prim;
 
+    .hiddenDesktop {
+      display: none;
+    }
+
     #head {
       @include flexLayout(row);
       @include row(space-between);
@@ -108,6 +185,7 @@
 
       #head-text {
         font: $weight-sec 1rem $font-sec;
+        color: #093c83e8;
       }
       #homeBtn {
         margin: auto 0;
@@ -119,7 +197,9 @@
       #homeBtn:hover,
       #homeBtn:focus {
         border: 0.9px solid transparent;
-        background: #093c83e8;
+        // background: #093c83e8;
+        /* testing out bootstrap colors scheme here*/
+        background: #5cb85c;
         color: hsla(0, 0%, 100%, 0.966);
         outline: none;
         transition: all 0.3s ease-in;
@@ -130,25 +210,56 @@
       @include column(center);
       gap: 1rem;
       width: 50%;
-      height: 80%;
+      height: 86%;
       margin: 0.5rem auto;
       padding: 1rem;
       border-radius: 0.5rem;
       background: hsl(0, 0%, 99%);
       box-shadow: 0.1rem 0.2rem 0.2rem 0.1rem hsl(0, 0%, 94%);
+      overflow: hidden;
+
+      #bg-image {
+        /* The image used */
+        background: url(../assets/images/class.jpg);
+        border-radius: 0.5rem;
+        // border: 1px solid rgba(41, 41, 41, 0.527);
+        /* Add the blur effect */
+        filter: blur(1px);
+        -webkit-filter: blur(0.78px);
+        /* Full height */
+        height: 62%;
+        width: 50%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        top: 8%;
+        z-index: 1;
+      }
 
       #desc {
         height: 80%;
         width: 70%;
-        font: $weight-tet 0.89rem $font-sec;
+        font: 500 0.89rem $font-sec;
         padding: 0.8rem;
         line-height: 2;
+        position: relative;
+        z-index: 99;
+
+        .desc {
+          // width: 100%;
+          background: hsla(0, 92%, 24%, 0.377);
+          color: hsl(0, 0%, 94%);
+          padding: 0.3rem;
+          border-radius: 0.3rem;
+        }
       }
       #list {
         @include flexLayout(row wrap);
         @include row(space-between);
         width: 450px;
-        height: 20%;
+        height: 10%;
         padding: 0.5rem 0;
         // gap: .4rem;
 
@@ -156,7 +267,7 @@
           @include flexLayout(row);
           @include row(space-between);
           @include column(center);
-          padding: 0.7rem 0.3rem;
+          padding: 1rem 0.3rem;
           height: 30%;
           width: 48%;
           border: 1px solid hsl(0, 0%, 80%);
@@ -165,13 +276,27 @@
           .icon1 {
             @include gridCenter;
             font-size: 1.2rem;
+            color: #093c83e8;
           }
           .icon2 {
             @include gridCenter;
             font-size: 1rem;
+            color: #093c83e8;
           }
           .list-fac {
             font: $weight-sec 0.8rem $font-sec;
+          }
+        }
+        .list-nav:hover {
+          transition: all 0.4s ease;
+          // background-color: #093c83e8;
+          background-color: #0275d8;
+          color: hsl(0, 0%, 94%);
+
+          .list-fac,
+          .icon1,
+          .icon2 {
+            color: hsl(0, 0%, 92%);
           }
         }
       }
