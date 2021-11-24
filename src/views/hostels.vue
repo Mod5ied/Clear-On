@@ -1,29 +1,39 @@
 <template>
   <div id="home">
     <header class="navbar has-shadow" id="head">
+      <ion-icon
+        name="arrow-back-circle-outline"
+        id="backBtn"
+        class="hiddenDesktop"
+        @click="goBack"
+      ></ion-icon>
       <h1 class="navbar-item" id="head-text">Hostels</h1>
-      <router-link to="/" id="homeBtn">Home</router-link>
+      <router-link to="/" id="homeBtn" class="hiddenMobile">Home</router-link>
     </header>
     <main id="main">
       <section id="desc">
+        <img id="main-Img" alt="" class="hiddenDesktop" />
         <p class="desc">
           UNN hostel fee must be paid for those whose intent is to reside in the
-          school hostels. The price range varies most sessions, but falls
-          along the following prices:
+          school hostels. The price range varies most sessions, but falls along
+          the following prices:
         </p>
         <br />
-        *️⃣Male Hostel = #12,000
+        <p class="desc2">
+          *️⃣Male Hostel = #12,000
+          <br />
+          *️⃣Female Hostel = #15,000 - #25,000
+        </p>
         <br />
-        *️⃣Female Hostel = #15,000 - #25,000
         <br />
-        <br />
-        <p>
+        <p class="desc3">
           Please Note: To be able to qualify for hostel application, the student
           should have paid their respective tuition fees, as you need that to be
           able to apply.
           <br />
           Now to get more details about how to apply for and walk through the
-          hostel clearance processes, click on the tabs below based on your gender:
+          hostel clearance processes, click on the tabs below based on your
+          gender:
         </p>
       </section>
       <section id="list">
@@ -42,18 +52,27 @@
         </nav>
       </section>
     </main>
-    <footer id="foot">
-      <nav id="foot-nav">
-        <router-link to="/" id="foot-text">Home</router-link>
-        <span id="foot-style"></span>
-      </nav>
-    </footer>
+   
   </div>
 </template>
 
 <script>
+import { reactive, toRefs } from "@vue/reactivity";
+import { useRouter } from "vue-router";
+
 export default {
   name: "hostels",
+  setup() {
+    const reuter = useRouter();
+    const methods = reactive({
+      goBack: () => {
+        return reuter.back(-1);
+      }
+    });
+    return {
+      ...toRefs(methods)
+    };
+  },
 };
 </script>
 

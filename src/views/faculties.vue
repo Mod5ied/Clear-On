@@ -1,11 +1,17 @@
 <template>
   <div id="home">
     <header class="navbar has-shadow" id="head">
+      <ion-icon
+        name="arrow-back-circle-outline"
+        id="backBtn"
+        class="hiddenDesktop"
+        @click="goBack"
+      ></ion-icon>
       <h1 class="navbar-item" id="head-text">Faculties</h1>
       <router-link to="/" id="homeBtn" class="hiddenMobile">Home</router-link>
     </header>
     <main id="main">
-      <img alt="" id="bg-image" class="hiddenMobile">
+      <img alt="" id="bg-image">
       <section id="desc">
         <p class="desc">
           Here are the faculties that we know of.. click if you find yours.
@@ -54,18 +60,25 @@
         </nav>
       </section>
     </main>
-    <footer id="foot">
-      <nav id="foot-nav">
-        <router-link to="/" id="foot-text">Home</router-link>
-        <span id="foot-style"></span>
-      </nav>
-    </footer>
   </div>
 </template>
 
 <script>
+import { reactive, toRefs } from '@vue/reactivity';
+import { useRouter } from 'vue-router';
 export default {
   name: "faculites",
+  setup(){
+    let reuter = useRouter()
+    const methods = reactive({
+      goBack: ()=>{
+        return reuter.back(-1)
+      }
+    })
+    return{ 
+      ...toRefs(methods)
+    }
+  }
 };
 </script>
 
