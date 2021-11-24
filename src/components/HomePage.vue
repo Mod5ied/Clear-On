@@ -2,30 +2,34 @@
   <div class="home">
     <app-header :title="title"></app-header>
     <main id="main">
-      <svg id="svg1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- <svg id="svg1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="#07316B"
           d="M25.6,-48.1C33.3,-39.9,39.7,-33.3,50.3,-25.5C60.9,-17.8,75.7,-8.9,77.7,1.1C79.6,11.2,68.8,22.3,62,36.6C55.1,50.9,52.3,68.2,42.6,74.5C33,80.8,16.5,76,1.9,72.8C-12.7,69.5,-25.5,67.8,-37.8,63.1C-50.1,58.3,-62,50.5,-71.6,39.5C-81.2,28.4,-88.6,14.2,-85.8,1.6C-83.1,-11,-70.2,-22.1,-60.3,-32.7C-50.5,-43.3,-43.7,-53.6,-34.1,-60.7C-24.6,-67.9,-12.3,-71.9,-1.7,-69C9,-66.2,17.9,-56.4,25.6,-48.1Z"
           transform="translate(100 100)"
         />
-      </svg>
+      </svg> -->
       <section id="main-section">
-        <h2 id="greets">Hello There!</h2>
-        <p id="info">
-          ClearOn is a platform that helps and serves as a guide for you to get through the
-          rigorous and confusing process of school clearance ranging from
-          Faculty to Final year clearance. It also offers useful tips to get you
-          settled into the school life and attain your best with less stress.
-        </p>
-        <p id="date" details="bolder 4 date">
-          Today: November{{ month }},{{ day }},{{ year }}
-        </p>
         <img :src="unn" alt="" id="mainImage" loading="lazy" />
+        <img alt="" id="mainImg" class="hiddenDesktop" loading="lazy" />
+        <i class="cover">
+          <h2 id="greets">Hello There!</h2>
+          <p id="info">
+            ClearOn is a platform that helps and serves as a guide for you to
+            get through the rigorous and confusing process of school clearance
+            ranging from Faculty to Final year clearance. It also offers useful
+            tips to get you settled into the school life and attain your best
+            with less stress.
+          </p>
+          <p id="date" details="bolder 4 date">
+            Today: November{{ month }},{{ day }},{{ year }}
+          </p>
+        </i>
       </section>
       <!-- Scroll Section Here -->
       <!-- The image should be hidden in mobile view -->
       <section id="scroll-section">
-        <img loading="lazy" alt="" id="scrollImage" class="hiddenMobile"/>
+        <img loading="lazy" alt="" id="scrollImage" class="hiddenMobile" />
         <p class="hiddenMobile">
           Clearance process is indeed a stressful one and we well understand
           this, hence we've carefully decided and compiled the best possible way
@@ -85,16 +89,18 @@
       <!-- ADS HERE -->
       <section id="ad-sec1">
         <h4 id="title">SEARCHING FOR A LODGE?</h4>
-        <p id="info">
-          UnnHousing has got you covered! The platform has a ton of beautiful
-          and affordable lodges at distinct locations in and around UNN. The
-          avalable lodges are presented in price ranges, from affordable to
-          luxurios to suit your needs. Click on - UnnHousing below to check them
-          out, and don't forget to recommend ClearOn to friends!
-        </p>
-        <a href="https://www.unnhousing.com/" id="ad-link">
-          <img src="@/assets/UnnHouse-logo.png" alt="" />
-        </a>
+        <i class="cover">
+          <p id="info">
+            UnnHousing has got you covered! The platform has a ton of beautiful
+            and affordable lodges at distinct locations in and around UNN. The
+            avalable lodges are presented in price ranges, from affordable to
+            luxurios to suit your needs. Click on - UnnHousing below to check
+            them out, and don't forget to recommend ClearOn to friends!
+          </p>
+          <a href="https://www.unnhousing.com/" id="ad-link">
+            <img src="@/assets/UnnHouse-logo.png" alt="" />
+          </a>
+        </i>
       </section>
     </main>
     <app-footer></app-footer>
